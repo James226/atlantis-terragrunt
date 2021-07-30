@@ -6,6 +6,6 @@ WORKDIR /home/atlantis
 
 COPY --chown=atlantis:atlantis repos.yaml .
 
-RUN apt install -y python3
+RUN apk add --no-cache python3
 
 CMD ["server", "--repo-config=repos.yaml"]
